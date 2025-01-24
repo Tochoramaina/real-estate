@@ -15,6 +15,7 @@ const Profile = () => {
   const [fileUploadError, setFileUploadError] = useState(false)
   const [formData, setFormData] = useState({});
   const [updateSuccess, setUpdateSuccess] = useState(false);
+  const [showListingsError, setshowListingsError] = useState(false);
   const dispatch = useDispatch() 
   useEffect(() => {
     if(file){
@@ -97,9 +98,24 @@ const Profile = () => {
       }
       dispatch(deleteUserSuccess(data))
      } catch (error) {
-      dispatch(deleteUserFailure(data.message))
+      dispatch(deleteUserFailure(error.message))
      }
     }
+
+    const handleShowListings = async() => {
+      try {
+        setshowListingsError(false)
+        const res = await fetch(`/api/user/listings/${currentUser._id}`);
+        const data = await res.json();
+        if(data.success === false){
+          setshowListingsError(true);
+          return;
+        }
+      } catch (error) {
+        setshowListingsError(true);
+      }
+    }
+
 
   return (
     <div className="p-3 max-w-lg mx-auto">
@@ -129,6 +145,8 @@ const Profile = () => {
       </div>
       <p className="text-red-700">{error ? error : ''}</p>
       <p className="text-green-700">{updateSuccess ? 'User is updated successfully' : ''}</p>
+      <button onClick={handleShowListings} className="text-green-700 w-full">Show Listings</button>
+      <p className="text-red-400 mt-5">{showListingsError ? "Error showing listings" : ''}</p>
     </div>
   )
 }

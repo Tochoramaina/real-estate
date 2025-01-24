@@ -41,7 +41,7 @@ const CreateListing = () => {
                 setImageUploadError(false);
                 
             }).catch((err) => {
-                setImageUploadError('Image upload failed (2 mb per image)');
+                setImageUploadError('Image upload failed (2 mb per image)', err);
                 setUploading(false)
                 
             });
