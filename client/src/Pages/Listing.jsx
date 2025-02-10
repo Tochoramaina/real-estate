@@ -101,7 +101,7 @@ const Listing = () => {
                 <button onClick={() => setContact(true)} className="bg-slate-500 text-white rounded-lg uppercase hover:opacity-95 p-3">Contact Landlord</button>
             )}
             {contact && <Contact listing = {listing}/>}
-           
+            
     </div>
 
   </main>
