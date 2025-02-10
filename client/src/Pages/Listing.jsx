@@ -4,8 +4,8 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 import SwiperCore from 'swiper'
 import {Navigation} from 'swiper/modules'
 import 'swiper/css/bundle'
-import {FaBed} from 'react-icons'
-import {FaBath} from 'react-icons'
+import {FaBed} from 'react-icons/fa'
+import {FaBath} from 'react-icons/fa'
 import {useSelector} from 'react-redux'
 import Contact from "../Components/Contact"
 const Listing = () => {
