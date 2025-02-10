@@ -69,7 +69,7 @@ const Listing = () => {
                 {
                 listing.offer && (
                     <p className="bg-green-600 w-full max-w-[200px text-white text-center p-1 rounded-md">
-                        ${+listing.regulaPrice - +listing.discountPrice}
+                        ${+listing.regulaPrice - +listing.discountPrice} Off
                     </p>
                 )  
                 }
