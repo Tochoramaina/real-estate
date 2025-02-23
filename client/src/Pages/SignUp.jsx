@@ -33,7 +33,7 @@ const SignUp = () => {
       }
       setLoading(false);
       setError(null)
-      navigate('/');
+      navigate('/signin');
 
     }catch{
       setLoading(false);
