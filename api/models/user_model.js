@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema({
     },
     avatar : {
         type : String,
-        default : "https://cdn.pixaboy.com/photo/2015/10/05/22/37/blank=profile=picture=973460_1280.png"
+        default : `https://www.bing.com/ck/a?!&&p=0548d8115900c7d4ca16a070877ab3c372a67e04b163cb0924f151fa1d209d42JmltdHM9MTc0MDYxNDQwMA&ptn=3&ver=2&hsh=4&fclid=37c4cac1-32d4-6db0-019c-df4c33286c67&u=a1L2ltYWdlcy9zZWFyY2g_cT1kdW1teSUyMHByb2ZpbGUlMjBwaWMmRk9STT1JUUZSQkEmaWQ9RDU0OTFCNzQ0M0I5RDBENEUzODgyRTg2QUI0RTJDMEU2Rjg5MzNGRA&ntb=1`
     },
 
 }, {timestamps : true});
